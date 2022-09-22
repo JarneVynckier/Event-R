@@ -1,0 +1,26 @@
+body{
+
+}
+
+.input{
+    width: 89%;
+    padding: 12px 20px;
+    margin:20px 0px;
+    box-sizing: border-box;
+    border-color: black;
+    border-radius: 5px;
+}
+
+.select{
+    width: 10%;
+    padding: 12px 20px;
+    margin: 20px 0px;
+    box-sizing: border-box;
+    border-color: black;
+    border-radius: 5px;
+}
+
+.events{
+    width: 100%;
+
+}
