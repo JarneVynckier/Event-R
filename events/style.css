@@ -3,7 +3,7 @@ body{
 }
 
 .input{
-    width: 89%;
+    width: 90%;
     padding: 12px 20px;
     margin:20px 0px;
     box-sizing: border-box;
@@ -12,7 +12,7 @@ body{
 }
 
 .select{
-    width: 10%;
+    width: 9%;
     padding: 12px 20px;
     margin: 20px 0px;
     box-sizing: border-box;
@@ -21,6 +21,11 @@ body{
 }
 
 .events{
-    width: 100%;
-
+    width: 80vw;
+    height: 200px;
+    margin-bottom: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
 }
