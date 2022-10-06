@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    background-color: #f3f3f3;
+}
+
+
+h1 {
+    padding: 2rem 0;
+}
+
+.nav-top {
+    display: flex;
+}
+
+.menu-icon {
+    padding-left: 0;
+    text-align: end;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    color: white;
+}
+
+nav {
+    display: block;
+    background: #000;
+    color: white;
+    padding: 10px;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul {
+    display: none;
+    padding: 10px 0;
+}
+
+nav li {
+    list-style: none;
+    padding: 5px;
+    border-radius: 5px;
+    border-bottom: 1px solid white;
+}
+nav li:last-child {
+    border-style: none;
+}
+
+@media only screen and (min-width : 480px) {
+
+    .menu-icon {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    nav li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 10px;
+        padding: 5px;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+
+    nav li:hover,
+    nav li:focus-visible {
+        transition: border-color 0.2s linear;
+        border: 2px solid white;
+        border-radius: 5px;
+    }
+
+    #myLinks {
+        padding-left: 0;
+        text-align: end;
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+    }
+main{background-color: #f1f1f1; }
+
+h1{margin: 1.6rem 8rem 1.6rem 8rem }
+
+.about{margin: 1.6rem 8rem 3rem 8rem;
+    border: 2px solid #111;
+    background-color: #c62444; color: #111}
+
+.logogroot{margin:1.6rem 28rem 1.6rem}
+.onzeinformatie{ margin:1.6rem 8rem 1.6rem 8rem}
+
+.jarne,.gunnar,.emile,.timon,.timon p,h3,p{ padding: 1rem 1rem 1rem 1rem}}
+
+.jarne,.gunnar,.timon,.emile{display: flex; margin: 3rem 8rem 3rem 8rem;
+    border: 2px solid #111;
+    background-color: #c62444; color: #111}
+
