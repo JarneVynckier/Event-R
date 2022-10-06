@@ -21,7 +21,7 @@ input[type=password]:focus {
 
 
 button {
-    background-color: #04AA6D;
+    background-color: #F05C26;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -29,6 +29,7 @@ button {
     cursor: pointer;
     width: 100%;
     opacity: 0.9;
+    border-radius: 0.3rem;
 }
 
 #enter {
@@ -128,6 +129,7 @@ hr {
 
 #buttonSignup {
     visibility: hidden;
+    background-color: #04AA6D;
 }
 
 

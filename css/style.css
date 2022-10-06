@@ -94,6 +94,18 @@ nav li:last-child {
 		align-items: center;
 	}
 
+	#myLinks > .button-link {
+		border-style: none;
+	}
+
+	#myLinks > li > a  {
+		height: fit-content;
+	}
+
+	#myLinks > li {
+		height: fit-content;
+	}
+
 }
 
 #map {
