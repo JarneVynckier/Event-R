@@ -1,0 +1,42 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 1280px;
+}
+
+body{
+
+}
+
+.input{
+    width: 90%;
+    padding: 12px 20px;
+    margin:20px 0px;
+    box-sizing: border-box;
+    border-color: black;
+    border-radius: 5px;
+}
+
+.select{
+    width: 9%;
+    padding: 12px 20px;
+    margin: 20px 0px;
+    box-sizing: border-box;
+    border-color: black;
+    border-radius: 5px;
+}
+
+.events{
+    width: 100%;
+    height: 20vh;
+    margin-bottom: 10px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-radius: 10px;
+}
