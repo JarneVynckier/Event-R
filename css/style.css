@@ -3,7 +3,19 @@
 * {
 	padding: 0;
 	margin: 0;
+
+}
+
+body {
 	font-family: 'Josefin Sans', sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+	background-color: #f3f3f3;
+}
+
+
+h1 {
+	margin: 3.375rem 0;
 }
 
 .nav-top {
@@ -16,6 +28,7 @@
 	display: flex;
 	margin-left: auto;
 	align-items: center;
+	color: white;
 }
 
 nav {
@@ -39,8 +52,12 @@ nav ul {
 nav li {
 	list-style: none;
 	padding: 5px;
-	border: 2px solid black;
 	border-radius: 5px;
+	border-radius: 0%;
+	border-bottom: 1px solid white;
+}
+nav li:last-child {
+	border-style: none;
 }
 
 @media only screen and (min-width : 480px) {
@@ -62,7 +79,8 @@ nav li {
 		border-radius: 5px;
 	}
 
-	nav li:hover {
+	nav li:hover,
+	nav li:focus-visible {
 		transition: border-color 0.2s linear;
 		border: 2px solid white;
 		border-radius: 5px;
@@ -75,4 +93,70 @@ nav li {
 		margin-left: auto;
 		align-items: center;
 	}
+
+}
+
+#map {
+	width: 600px;
+	height: 400px;
+	position: relative;
+}
+
+.main-event {
+	background-color: #c62444;
+	padding: 1rem 0 3rem 0;
+}
+
+.main-event div:not(.main-wrapper):not(#map) {
+	display: flex;
+	gap: 3rem;
+}
+
+.main-event > h1 {
+
+}
+
+.main-event  div:not(.main-wrapper) > p {
+	flex-shrink: 5;
+	height: fit-content;
+	align-self: center;
+}
+
+.main-wrapper {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.link-button {
+	border: 1px white solid;
+	padding: 0.5rem 1rem;
+	transition: color 0.2s linear;
+	transition: background-color 0.2s linear;
+}
+
+.link-button:hover,
+.link-button:focus-visible {
+	background-color: white;
+	color: #c62444;
+}
+
+.event-list {
+	display: flex;
+	list-style: none;
+	gap: 2rem;
+	margin: 5rem 0;
+}
+
+.event-list > li {
+	display: flex;
+	flex-direction: column;
+	background-color: #c62444;
+	padding: 2rem;
+	aspect-ratio: auto;
+	border-radius: 5px;
+}
+
+.event-list >li > a {
+	width: fit-content;
+	margin:  1rem auto;
 }
