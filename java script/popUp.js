@@ -1,7 +1,7 @@
 
 var popUp = document.getElementById('popUp');
 var register = document.getElementById('register')
-var body = document.getElementsByTagName("BODY")[0]; 
+var body = document.getElementsByTagName("BODY")[0];
 
 register.onclick = function() {
     popUp.style.display = "flex";
@@ -41,11 +41,11 @@ function checkPsw() {
         document.getElementById('buttonSignup').style.visibility = 'unset';
         document.getElementById('form').setAttribute('action', "insert.php");
         document.getElementById('form').setAttribute('method', "post");
-        
+
     }
     else {
         document.getElementById('pswR').style.color = 'red';
         document.getElementById('pswR').innerHTML = 'Repeat Password (Passwords dont match)'
-        
+
     }
 }
