@@ -45,7 +45,6 @@ button:hover {
     background-color: #f44336;
 }
 
-
 #buttonCancel,
 .signup {
     display: flex;
@@ -53,11 +52,9 @@ button:hover {
     width: 100%;
 }
 
-
 .container {
     padding: 16px;
 }
-
 
 #popUp {
     display: none;
@@ -67,12 +64,10 @@ button:hover {
     top: 0;
     width: 100vw;
     height: 100vh;
-    overflow: auto;
     background-color: #000000bb;
     padding-top: 50px;
     overflow: hidden;
 }
-
 
 .popUp-content {
     justify-content: center;
@@ -83,12 +78,10 @@ button:hover {
     height: fit-content;
 }
 
-
 hr {
     border: 1px solid #f1f1f1;
     margin-bottom: 25px;
 }
-
 
 #spanClose {
     font-size: 40px;
@@ -104,14 +97,14 @@ hr {
 }
 
 .top-bar > h1 {
-    margin: 0rem;
+    margin: 0;
 }
+
 #spanClose:hover,
 #spanClose:focus-visible {
     color: #f44336;
     cursor: pointer;
 }
-
 
 .clearfix::after {
     content: "";
@@ -132,7 +125,6 @@ hr {
     background-color: #04AA6D;
 }
 
-
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -142,7 +134,7 @@ hr {
     grid-template-areas:
         "first-name last-name"
         "email email"
-        "passowrd repeat-password"
+        "password repeat-password"
         "cancel signup";
 }
 
@@ -158,8 +150,8 @@ hr {
     grid-area: email;
 }
 
-.passowrd {
-    grid-area: passowrd;
+.password {
+    grid-area: password;
 }
 
 .repeat-password {
