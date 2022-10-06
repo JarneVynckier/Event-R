@@ -17,8 +17,8 @@ buttonCancel.onclick = function (){
     popUp.style.display = "none";
 }
 
-window.onclick = function(event) {
-    if (event.target === popUp) {
-        popUp.style.display = "none";
-    }
-}
+// window.onclick = function(event) {
+//     if (event.target === popUp) {
+//         popUp.style.display = "none";
+//     }
+// }
