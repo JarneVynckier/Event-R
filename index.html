@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/stylesheet.css">
 
 
+
 </head>
 
 <body>
@@ -79,7 +80,6 @@
             <a class="link-button" href="">visit</a>
 
             <div>
-
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sint, totam. Aliquid corporis
                     dignissimos hic iure laudantium magni natus omnis sed, voluptas? Aliquam aut cum distinctio dolor
                     dolorum eligendi fugiat iste iure minus mollitia nobis, nulla porro quia quisquam repellendus,
@@ -89,7 +89,7 @@
                     temporibus voluptatibus? Delectus dolorum qui rerum tempora vel. Ipsa, recusandae, repellat.</p>
                 <img src="https://picsum.photos/300/360" alt="foto van evenement">
                 <div id="map"></div>
-
+                <script src="java script/mapView.js"></script>
             </div>
         </div>
     </section>
@@ -121,23 +121,6 @@
 
 </footer>
 
-<script>
-    var map = L.map('map').setView([51.505, -0.09], 13);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
-    var marker = L.marker([51.5, -0.09]).addTo(map);
-
-    function myFunction() {
-        var x = document.getElementById("myLinks");
-        if (x.style.display === "block") {
-            x.style.display = "none";
-        } else {
-            x.style.display = "block";
-        }
-    }
-</script>
 </body>
 
 </html>
