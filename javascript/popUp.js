@@ -1,8 +1,8 @@
 var popUpRegister = document.getElementById('popUpRegister');
-var register = document.getElementById('register')
+var register = document.getElementById('register');
 var body = document.getElementsByTagName("BODY")[0];
-var popUpLogin = document.getElementById('popUpLogin')
-var login = document.getElementById('login')
+var popUpLogin = document.getElementById('popUpLogin');
+var login = document.getElementById('login');
 
 login.onclick = function() {
     popUpLogin.style.display = "flex";

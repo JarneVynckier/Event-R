@@ -5,13 +5,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="recources/icofont.min.css">
+        <link rel="stylesheet" href="resources/icofont.min.css">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
             integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
         <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
             integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
         <title>Event-R</title>
-        <link rel="stylesheet" href="css/stylesheet.css">
+        <link rel="stylesheet" href="./css/home.css">
+        <link rel="stylesheet" href="./css/popUp.css">
 
 
     </head>
@@ -20,29 +21,67 @@
         <header>
             <nav>
                 <div class="nav-top">
-                    <img class="logo" src="recources/Logo.png" height="64" alt="logo">
+                    <img class="logo" src="resources/Logo.png" height="64" alt="logo">
                     <a class="menu-icon" href="javascript:void(0);" onclick="myFunction()"><img
-                            src="recources/navigation-menu.svg" width="32" class="rotate" alt="menu"></a>
+                            src="resources/navigation-menu.svg" width="32" class="rotate" alt="menu"></a>
                 </div>
 
                 <ul id="myLinks">
+                    <li class="button-link"> <button id="login">Login</button></li>
                     <li class="button-link"> <button id="register">Register</button></li>
                     <li><a href="">HOME</a></li>
                     <li><a href="events">MY EVENTS</a></li>
                     <li><a href="./account">MY ACOUNT</a></li>
-                    <li><a href="About">ABOUT</a></li>
+                    <li><a href="about">ABOUT</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            <div id="popUp" class="popUp">
+            <div id="popUpLogin" class="popUp">
+
+                <form class="popUp-content" id="formLogin">
+
+                    <div class="container">
+                        <div class="top-bar">
+                            <h1>Login</h1>
+                            <span class="spanClose" id="spanCloseLogin" title="Close popUp">&times;</span>
+                        </div>
+                        <p>Please fill in this form to log in to your account.</p>
+                        <hr>
+
+                        <div class="grid">
+                            <div class="email">
+                                <label for="emailLogin"><b>Email</b></label>
+                                <input type="text" id="emailLogin" placeholder="Enter Email" name="email" required>
+                            </div>
+                            <div class="password">
+                                <label for="pswLogin"><b>Password</b></label>
+                                <input type="password" id="pswLogin" placeholder="Enter Password" name="psw" required>
+                            </div>
+                            <div class="cancel">
+                                <button id="buttonCancelLogin" type="button">Cancel</button>
+                            </div>
+                            <div class="signup">
+                                <button id="buttonSignupLogin" type="submit" class="signup">Login</button>
+                            </div>
+                        </div>
+
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
+                            Remember me
+                        </label>
+                    </div>
+
+                </form>
+            </div>
+            <div id="popUpRegister" class="popUp">
 
                 <form class="popUp-content" id="form">
 
                     <div class="container">
                         <div class="top-bar">
                             <h1>Sign Up</h1>
-                            <span id="spanClose" title="Close popUp">&times;</span>
+                            <span class="spanClose" id="spanClose" title="Close popUp">&times;</span>
                         </div>
                         <p>Please fill in this form to create an account.</p>
                         <hr>
@@ -89,7 +128,7 @@
 
                 </form>
             </div>
-            <script src="java%20script/popUp.js"></script>
+            <script src="./javascript/popUp.js"></script>
             <section class="main-event">
                 <div class="main-wrapper">
                     <h1>Event Naam</h1>
@@ -112,7 +151,7 @@
                         </p>
                         <img src="https://picsum.photos/300/360" alt="foto van evenement">
                         <div id="map"></div>
-                        <script src="java script/mapView.js"></script>
+                        <script src="./javascript/mapView.js"></script>
                     </div>
                 </div>
             </section>
@@ -145,7 +184,7 @@
             <section>
                 <div class="main-wrapper">
                     <h1>About this site.</h1>
-                    <p>This site is a handy tool for organising events with your friends or colleagues. You can easily create an event by signing in an clicking the create event button. When you have your event set up you can share the event by adding friends and inviting them.</p>
+                    <p>This site is a handy tool for organising events with your friends or colleagues. You can easily create an event by signing in a clicking the create event button. When you have your event set up you can share the event by adding friends and inviting them.</p>
                 </div>
             </section>
             
