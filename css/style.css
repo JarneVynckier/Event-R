@@ -56,9 +56,6 @@ nav li {
 	border-radius: 0%;
 	border-bottom: 1px solid white;
 }
-nav li:last-child {
-	border-style: none;
-}
 
 @media only screen and (min-width : 480px) {
 
@@ -87,7 +84,6 @@ nav li:last-child {
 	}
 
 	#myLinks {
-		padding-left: 0px;
 		text-align: end;
 		display: flex;
 		margin-left: auto;
