@@ -25,6 +25,9 @@
 
         <ul id="myLinks">
             <li class="button-link">
+                <button id="login">Login</button>
+            </li>
+            <li class="button-link">
                 <button id="register">Register</button>
             </li>
             <li><a href="">HOME</a></li>
@@ -35,14 +38,51 @@
     </nav>
 </header>
 <main>
-    <div id="popUp" class="popUp">
+    <div id="popUpLogin" class="popUp">
+
+        <form class="popUp-content" id="formLogin">
+
+            <div class="container">
+                <div class="top-bar">
+                    <h1>Login</h1>
+                    <span class="spanClose" id="spanCloseLogin" title="Close popUp">&times;</span>
+                </div>
+                <p>Please fill in this form to log in to your account.</p>
+                <hr>
+
+                <div class="grid">
+                    <div class="email">
+                        <label for="emailLogin"><b>Email</b></label>
+                        <input type="text" id="emailLogin" placeholder="Enter Email" name="email" required>
+                    </div>
+                    <div class="password">
+                        <label for="pswLogin"><b>Password</b></label>
+                        <input type="password" id="pswLogin" placeholder="Enter Password" name="psw" required>
+                    </div>
+                    <div class="cancel">
+                        <button id="buttonCancelLogin" type="button">Cancel</button>
+                    </div>
+                    <div class="signup">
+                        <button id="buttonSignupLogin" type="submit" class="signup">Login</button>
+                    </div>
+                </div>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
+                    Remember me
+                </label>
+            </div>
+
+        </form>
+    </div>
+    <div id="popUpRegister" class="popUp">
 
         <form class="popUp-content" id="form">
 
             <div class="container">
                 <div class="top-bar">
                     <h1>Sign Up</h1>
-                    <span id="spanClose" title="Close popUp">&times;</span>
+                    <span class="spanClose" id="spanClose" title="Close popUp">&times;</span>
                 </div>
                 <p>Please fill in this form to create an account.</p>
                 <hr>

@@ -56,7 +56,7 @@ button:hover {
     padding: 16px;
 }
 
-#popUp {
+.popUp {
     display: none;
     position: absolute;
     z-index: 100000;
@@ -83,7 +83,7 @@ hr {
     margin-bottom: 25px;
 }
 
-#spanClose {
+.spanClose {
     font-size: 40px;
     font-weight: bold;
     color: #797676;
@@ -100,8 +100,8 @@ hr {
     margin: 0;
 }
 
-#spanClose:hover,
-#spanClose:focus-visible {
+.spanClose:hover,
+.spanClose:focus-visible {
     color: #f44336;
     cursor: pointer;
 }
