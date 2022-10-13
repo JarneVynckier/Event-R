@@ -7,7 +7,6 @@ var login = document.getElementById('login');
 login.onclick = function() {
     popUpLogin.style.display = "flex";
     body.style.overflow ="hidden";
-    checkPsw();
 }
 
 register.onclick = function() {
