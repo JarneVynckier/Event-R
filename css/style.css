@@ -5,11 +5,20 @@
     margin: 0;
 }
 
+.flex-container {
+    display: flex;
+}
+
+.side-text {
+    max-width: 33%;
+}
+
 body {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 18px;
     line-height: 1.5;
     background-color: #f3f3f3;
+    margin-bottom: 3rem;
 }
 
 h1 {
