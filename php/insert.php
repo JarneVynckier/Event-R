@@ -18,8 +18,10 @@ $lastname = $_REQUEST['lastname'];
 $email = $_REQUEST['email'];
 $psw = $_REQUEST['psw'];
 
+$hash_psw = password_hash($psw, PASSWORD_DEFAULT);
+
 $sql = "INSERT INTO eventrsignup (firstname, lastname, email, password)
-    VALUES ('$name', '$lastname', '$email', '$psw')";
+    VALUES ('$name', '$lastname', '$email', '$hash_psw')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
@@ -29,6 +31,7 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 
+header("Location: ../");
 
 
 

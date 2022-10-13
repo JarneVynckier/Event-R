@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width">
     <title>Account</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/account.css">
 </head>
 <body>
 
