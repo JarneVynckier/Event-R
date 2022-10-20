@@ -7,10 +7,15 @@
 
 .flex-container {
     display: flex;
+    gap: 3rem;
 }
 
 .side-text {
     max-width: 33%;
+}
+
+.event-buttons > a {
+    color: #111111;
 }
 
 body {
@@ -63,10 +68,6 @@ nav li {
     border-bottom: 1px solid white;
 }
 
-nav li:last-child {
-    border-style: none;
-}
-
 @media only screen and (min-width: 480px) {
 
     .menu-icon {
@@ -84,6 +85,7 @@ nav li:last-child {
         padding: 5px;
         border: 2px solid black;
         border-radius: 5px;
+        height: fit-content;
     }
 
     nav li:hover,
@@ -103,10 +105,13 @@ nav li:last-child {
 
     #myLinks > .button-link {
         border-style: none;
+        width: 7rem;
     }
 
     #myLinks > li > a {
-        height: fit-content;
+            height: fit-content;
+            vertical-align: middle;
+
     }
 
     #myLinks > li {
@@ -344,4 +349,10 @@ hr {
 
 .signup {
     grid-area: signup;
+}
+
+.event-content {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 3rem;
 }
