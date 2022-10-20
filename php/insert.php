@@ -23,6 +23,7 @@ $hash_psw = password_hash($psw, PASSWORD_DEFAULT);
 $sql = "INSERT INTO eventrsignup (firstname, lastname, email, password)
     VALUES ('$name', '$lastname', '$email', '$hash_psw')";
 
+
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
