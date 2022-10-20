@@ -10,6 +10,8 @@ $psw = $_REQUEST['psw'];
 // Create connection
 $conn = new mysqli($hostname, $username, $password, $servername);
 
+
+
 $sql = "SELECT password FROM eventrsignup WHERE email = '$email'";
 $result = $conn->query($sql);
 foreach($result as $key => $value){
