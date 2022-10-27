@@ -18,21 +18,25 @@ $lastname = $_REQUEST['lastname'];
 $email = $_REQUEST['email'];
 $psw = $_REQUEST['psw'];
 
-$hash_psw = password_hash($psw, PASSWORD_DEFAULT);
+$count ="SELECT * FROM eventrsignup WHERE email = '$email' ";
+if ($conn->query($count)->num_rows == 0) {
+    $hash_psw = password_hash($psw, PASSWORD_DEFAULT);
 
-$sql = "INSERT INTO eventrsignup (firstname, lastname, email, password)
+    $sql = "INSERT INTO eventrsignup (firstname, lastname, email, password)
     VALUES ('$name', '$lastname', '$email', '$hash_psw')";
 
 
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
+    header("Location: ../");
 }
 
-$conn->close();
 
-header("Location: ../");
 
 
 
