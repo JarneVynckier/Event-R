@@ -5,36 +5,54 @@
     <meta name="viewport"
           content="width=device-width">
     <title>Events</title>
-    <link rel="stylesheet" href="../css/eventssearch.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 <header>
+    <nav>
+        <div class="nav-top">
+            <img class="logo" src="../resources/Logo.png" height="64" alt="logo">
+            <a class="menu-icon" href="javascript:void(0);" onclick="myFunction()">
+                <img src="../resources/navigation-menu.svg" width="32" class="rotate" alt="menu"></a>
+        </div>
 
+        <ul id="myLinks">
+            <li class="button-link">
+                <button id="login">Login</button>
+            </li>
+            <li class="button-link">
+                <button id="register">Register</button>
+            </li>
+            <li><a href="">HOME</a></li>
+            <li><a href="../events">MY EVENTS</a></li>
+            <li><a href="../account">MY ACOUNT</a></li>
+            <li><a href="../about">ABOUT</a></li>
+        </ul>
+    </nav>
 </header>
 <main>
-    <div class="container">
-        <label for="input"></label>
-        <input type="text" class="input" id="input" placeholder="Zoeken...">
-        <label for=""></label>
-        <select name="test" class="select" id="">
-            <option value="festival">Festival</option>
-            <option value="barbeque">Barbeque</option>
-        </select>
+    <div class="main-wrapper">
         <section>
-            <div class="events">
-                <img src="https://via.placeholder.com/32x32" alt="placeholder">
-                <p>Test Event</p>
+            <h1>Title of event</h1>
+            <h2>02/05/2023</h2>
+            <div class="event-content"><img src="https://picsum.photos/800/500">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores doloremque ipsam minima
+                    similique? Eos nesciunt quas repellendus voluptate! Adipisci alias dolorum ea, hic, illo in nam
+                    nobis nostrum omnis quidem quis, quos repudiandae temporibus! Deleniti, dolorum, labore. Accusantium
+                    cumque eaque ipsa, numquam odit quia recusandae rem repellat sapiente voluptas, voluptate
+                    voluptatibus! Atque, beatae commodi corporis debitis, deleniti expedita id illum in ipsum itaque
+                    laborum magni mollitia nihil officia officiis quasi quod recusandae veritatis voluptatem voluptatum?
+                    Quasi sit velit voluptatum.
+                </p>
+            </div>
+            <div class="event-buttons">
+                <a href="">Intrested</a>
+                <a href="">Going</a>
+                <a href="">Can't Go :(</a>
             </div>
         </section>
-        <section>
-            <div class="events">
 
-            </div>
-        </section>
     </div>
 </main>
-<footer>
-
-</footer>
 </body>
 </html>
