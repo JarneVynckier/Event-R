@@ -5,7 +5,8 @@
     <meta name="viewport"
           content="width=device-width">
     <title>Events</title>
-    <link rel="stylesheet" href="../css/style.css">
+<!--    <link rel="stylesheet" href="../css/style.css">-->
+    <link rel="stylesheet" href="../css/atomic-disign.css">
 </head>
 <body>
 <header>
@@ -16,17 +17,17 @@
                 <img src="../resources/navigation-menu.svg" width="32" class="rotate" alt="menu"></a>
         </div>
 
-        <ul id="myLinks">
+        <ul id="myLinks" class="nav-links">
             <li class="button-link">
                 <button id="login">Login</button>
             </li>
             <li class="button-link">
                 <button id="register">Register</button>
             </li>
-            <li><a href="">HOME</a></li>
-            <li><a href="../events">MY EVENTS</a></li>
-            <li><a href="../account">MY ACOUNT</a></li>
-            <li><a href="../about">ABOUT</a></li>
+            <li><a class="nav-link" href="">HOME</a></li>
+            <li><a class="nav-link" href="../events">MY EVENTS</a></li>
+            <li><a class="nav-link" href="../account">MY ACOUNT</a></li>
+            <li><a class="nav-link" href="../about">ABOUT</a></li>
         </ul>
     </nav>
 </header>
@@ -35,8 +36,10 @@
         <section>
             <h1>Title of event</h1>
             <h2>02/05/2023</h2>
-            <div class="event-content"><img src="https://picsum.photos/800/500">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores doloremque ipsam minima
+            <div class="img-inline-text">
+                <img src="https://picsum.photos/800/500">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores doloremque ipsam minima
                     similique? Eos nesciunt quas repellendus voluptate! Adipisci alias dolorum ea, hic, illo in nam
                     nobis nostrum omnis quidem quis, quos repudiandae temporibus! Deleniti, dolorum, labore. Accusantium
                     cumque eaque ipsa, numquam odit quia recusandae rem repellat sapiente voluptas, voluptate
@@ -45,10 +48,10 @@
                     Quasi sit velit voluptatum.
                 </p>
             </div>
-            <div class="event-buttons">
-                <a href="">Intrested</a>
-                <a href="">Going</a>
-                <a href="">Can't Go :(</a>
+            <div class="btn-group">
+                <a href="" class="button">Intrested</a>
+                <a href="" class="button">Going</a>
+                <a href="" class="button">Can't Go :(</a>
             </div>
         </section>
 
