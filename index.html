@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="./css/style.css">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="resources/icofont.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
             integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
         <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
@@ -48,8 +49,9 @@
 
                         <div class="grid">
                             <div class="email">
-                                <label for="emailLogin"><b>Email</b></label>
-                                <input type="text" id="emailLogin" placeholder="Enter Email" name="email" required>
+                                <label for="emailLogin"><b class="emailText">Email</b></label>
+                                <input class="emailInput" type="text" id="emailLogin" placeholder="Enter Email" name="email" required>
+                                <p id="reult"></p>
                             </div>
                             <div class="password">
                                 <label for="pswLogin"><b>Password</b></label>
@@ -93,8 +95,9 @@
                                 <input type="text" id="lastname" placeholder="Enter Last name" name="lastname" required>
                             </div>
                             <div class="email">
-                                <label for="email"><b>Email</b></label>
-                                <input type="text" id="email" placeholder="Enter Email" name="email" required>
+                                <label id="emailText" for="email"><b>Email</b></label>
+                                <input class="emailInput" type="text" id="email" placeholder="Enter Email" name="email" required>
+                                <h2 id="result"></h2>
                             </div>
                             <div class="password">
                                 <label for="psw"><b>Password</b></label>

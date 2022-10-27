@@ -67,3 +67,29 @@ function checkPsw() {
         document.getElementById('pswR').innerHTML = 'Repeat Password (Passwords dont match)';
     }
 }
+
+
+const validateEmail = (email) => {
+    return email.match(
+        /^(([^<>()[\]\\.,;:\s@]+(\.[^<>()[\]\\.,;:\s@]+)*)|(.+))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
+
+const validate = () => {
+    const $result = $('#emailText');
+    const email = $('#email').val();
+    $result.text('');
+
+    if (validateEmail(email)) {
+        $result.text('Email');
+        $result.css('font-weight','bold');
+        $result.css('color', 'black');
+    } else {
+        $result.text('Email ' + email + ' is not valid ');
+        $result.css('color', 'red');
+    }
+
+    return false;
+}
+
+$('#email').on('input', validate);
