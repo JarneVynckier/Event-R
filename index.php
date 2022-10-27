@@ -12,7 +12,8 @@ $conn = new mysqli($hostname, $username, $password, $servername);
 
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    $message = "Connection failed: " . $conn->connect_error . "The login and signup features wont work at the moment try again later";
+    $conn->close();
 }
 
 $name = isset($_POST['name']) ? (string)$_POST['name'] : '';
