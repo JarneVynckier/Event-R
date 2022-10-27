@@ -59,8 +59,6 @@ function checkPsw() {
 
         document.getElementById('pswR').style.color = 'black';
         document.getElementById('buttonSignup').style.visibility = 'unset';
-        document.getElementById('form').setAttribute('action', './php/insert.php');
-        document.getElementById('form').setAttribute('method', "post");
     }
     else {
         document.getElementById('pswR').style.color = 'red';

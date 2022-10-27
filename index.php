@@ -1,4 +1,48 @@
-<!DOCTYPE html>
+<?php
+$hostname = "5.181.134.167";
+$servername = "s5_Testserver";
+$username = "u5_6lTQBewUTJ";
+$password = "Sz=GhVEV!AVTr.CSx8J8lwnZ";
+
+$send = null;
+$message = null;
+
+// Create connection
+$conn = new mysqli($hostname, $username, $password, $servername);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$name = isset($_POST['name']) ? (string)$_POST['name'] : '';
+$lastname = isset($_POST['lastname']) ? (string)$_POST['lastname'] : '';
+$email = isset($_POST['email']) ? (string)$_POST['email'] : '';
+$psw = isset($_POST['psw']) ? (string)$_POST['psw'] : '';
+
+
+if (isset($_POST['btnSubmit'])) {
+    $send = true;
+}
+if ($send) {
+    $count = "SELECT * FROM eventrsignup WHERE email = '$email' ";
+    if ($conn->query($count)->num_rows == 0) {
+        $hash_psw = password_hash($psw, PASSWORD_DEFAULT);
+
+        $sql = "INSERT INTO eventrsignup (firstname, lastname, email, password)
+        VALUES ('$name', '$lastname', '$email', '$hash_psw')";
+        if ($conn->query($sql) === TRUE) {
+            $message = "Your account is created, welcome to Event-R";
+        }
+
+    } else {
+        $message = "Email is already in use, log in or try with a different e-mail";
+    }
+
+    $conn->close();
+}
+
+?><!DOCTYPE html>
 <html lang="en">
 
     <head>
@@ -75,7 +119,7 @@
             </div>
             <div id="popUpRegister" class="popUp">
 
-                <form class="popUp-content" id="form">
+                <form class="popUp-content" id="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
                     <div class="container">
                         <div class="top-bar">
@@ -112,7 +156,7 @@
                                 <button id="buttonCancel" type="button">Cancel</button>
                             </div>
                             <div class="signup">
-                                <button id="buttonSignup" type="submit" class="signup">Sign Up</button>
+                                <button id="buttonSignup" name="btnSubmit" type="submit" class="signup">Sign Up</button>
                             </div>
                         </div>
 
@@ -129,6 +173,16 @@
                 </form>
             </div>
             <script src="./javascript/popUp.js"></script>
+            <?php
+            if ($send){
+                ?>
+                <section>
+                    <span class="message error"><?php echo $message; ?></span>
+                </section>
+                <?php
+            }
+            ?>
+
             <section class="main-event">
                 <div class="main-wrapper">
                     <h1>Event Naam</h1>
