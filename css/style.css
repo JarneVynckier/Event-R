@@ -170,7 +170,7 @@ nav li {
     flex-direction: column;
     background-color: #c62444;
     padding: 2rem;
-    aspect-ratio: auto;
+    aspect-ratio: 1/1;
     border-radius: 5px;
 }
 
