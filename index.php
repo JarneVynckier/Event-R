@@ -53,6 +53,7 @@ if ($send) {
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="resources/icofont.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
             integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
         <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
@@ -62,24 +63,28 @@ if ($send) {
     </head>
 
     <body>
-        <header>
-            <nav>
-                <div class="nav-top">
-                    <img class="logo" src="resources/Logo.png" height="64" alt="logo">
-                    <a class="menu-icon" href="javascript:void(0);" onclick="myFunction()"><img
-                            src="resources/navigation-menu.svg" width="32" class="rotate" alt="menu"></a>
-                </div>
+    <header>
+        <nav>
+            <div class="nav-top">
+                <img class="logo" src="./resources/Logo.png" height="64" alt="logo">
+                <!--            <a class="menu-icon" href="javascript:void(0);" onclick="myFunction()">-->
+                <!--                <img src="../resources/navigation-menu.svg" width="32" class="rotate" alt="menu"></a>-->
+            </div>
 
-                <ul id="myLinks">
-                    <li class="button-link"> <button id="login">Login</button></li>
-                    <li class="button-link"> <button id="register">Register</button></li>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="events">MY EVENTS</a></li>
-                    <li><a href="./account">MY ACOUNT</a></li>
-                    <li><a href="about">ABOUT</a></li>
-                </ul>
-            </nav>
-        </header>
+            <ul id="myLinks" class="nav-links">
+                <li class="button-link">
+                    <button id="login" class="nav-button">LOGIN</button>
+                </li>
+                <li class="button-link">
+                    <button id="register" class="nav-button">REGISTER</button>
+                </li>
+                <li><a class="nav-link" href="./">HOME</a></li>
+                <li><a class="nav-link" href="./events">MY EVENTS</a></li>
+                <li><a class="nav-link" href="./account">MY ACOUNT</a></li>
+                <li><a class="nav-link" href="./about">ABOUT</a></li>
+            </ul>
+        </nav>
+    </header>
         <main>
             <div id="popUpLogin" class="popUp">
 

@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
+:root {
+    --background-color: #f3f3f3;
+    --text-color: #000000;
+    --accent-color: #c62444;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -345,4 +351,116 @@ hr {
 
 .signup {
     grid-area: signup;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: var(--background-color);
+}
+
+.main-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/*--------------------------------------------------------------------------
+ATOMS
+--------------------------------------------------------------------------*/
+h1 {
+    /*margin: 3.375rem 0;*/
+
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 26px;
+    line-height: 1.5;
+}
+
+.nav-button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+    opacity: 0.9;
+    border-radius: 0.3rem;
+}
+
+
+.nav-button:hover {
+    color: var(--accent-color);
+    background-color: var(--background-color);
+}
+
+.button {
+    text-decoration: none;
+    color: var(--background-color);
+    font-size: 20px;
+    font-variant: all-petite-caps;
+    background-color: var(--accent-color);
+    padding: 1rem;
+    margin: 0.1rem;
+    border: var(--text-color) 2px solid;
+    display: inline-block;
+    /* Transitions */
+    transition-property: background-color, color, padding, margin;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.button:hover, .button:focus-visible {
+    color: var(--accent-color);
+    background-color: var(--background-color);
+    padding: 1.1rem;
+    margin: 0;
+}
+/* MOLECULES */
+
+.img-inline-text {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 3rem;
+}
+
+.btn-group {
+    height: max-content;
+}
+.nav-links {
+    display: flex;
+    gap: 3rem;
+    margin-right: 2rem;
+    align-items: center;
+}
+
+/* ORGANISMS */
+nav {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.event-image {
+
+    box-shadow: 1rem 1rem #c62444,
+    16px 16px 0 8px black;
+
+}
+
+.nav-link {
+    padding: .5rem;
+    transition: border-color ease-in-out 0.2s;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+    border-color: white;
 }

@@ -5,7 +5,9 @@
     <meta name="viewport"
           content="width=device-width">
     <title>Account</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
     <link rel="stylesheet" href="./style.css">
+<!--    <link rel="stylesheet" href="../css/style.css">-->
     <script src="getfriends.js"></script>
     <script src="getevent.js"></script>
     <script src="display.js"></script>
@@ -19,29 +21,29 @@ $loggedin = "true";
 <header>
     <nav>
         <div class="nav-top">
-            <img class="logo" src="../resources/logo.png" height="64" alt="logo">
-            <a class="menu-icon" href="javascript:void(0);" onclick="myFunction()"><img
-                        src="resources/navigation-menu.svg" width="32" class="rotate" alt="menu"></a>
+            <img class="logo" src="../resources/Logo.png" height="64" alt="logo">
+            <!--            <a class="menu-icon" href="javascript:void(0);" onclick="myFunction()">-->
+            <!--                <img src="../resources/navigation-menu.svg" width="32" class="rotate" alt="menu"></a>-->
         </div>
 
-        <ul id="myLinks">
+        <ul id="myLinks" class="nav-links">
             <li class="button-link">
-                <button id="login">Login</button>
+                <button id="login" class="nav-button">LOGIN</button>
             </li>
             <li class="button-link">
-                <button id="register">Register</button>
+                <button id="register" class="nav-button">REGISTER</button>
             </li>
-            <li><a href="">HOME</a></li>
-            <li><a href="events">MY EVENTS</a></li>
-            <li><a href="./account">MY ACOUNT</a></li>
-            <li><a href="about">ABOUT</a></li>
+            <li><a class="nav-link" href="../">HOME</a></li>
+            <li><a class="nav-link" href="../events">MY EVENTS</a></li>
+            <li><a class="nav-link" href="./">MY ACOUNT</a></li>
+            <li><a class="nav-link" href="../about">ABOUT</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
     <h1>Mijn account</h1>
-    <nav>
+    <nav class="bottom-nav">
         <button id="btngegevens" onclick="displayGegevens()">Gegevens</button>
         <button id="btnvrienden" onclick="displayVrienden()">Vrienden</button>
         <button id="btnevenementen" onclick="displayEvenementen()">Evenementen</button>
