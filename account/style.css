@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    background-color: #f3f3f3;
+}
+
+h1 {
+    margin: 3.375rem 0;
+    text-align: center;
+}
+
+
+#vrienden, #evenementen{
+
+}
+
+.nav-top {
+    display: flex;
+}
+
+.menu-icon {
+    padding-left: 0;
+    text-align: end;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    color: white;
+}
+
+header nav {
+    background: #000;
+    color: white;
+    padding: 10px;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul {
+    display: none;
+    padding: 10px 0;
+}
+
+nav li {
+    list-style: none;
+    padding: 5px;
+    border-radius: 5px;
+    border-bottom: 1px solid white;
+}
+
+nav li:last-child {
+    border-style: none;
+}
+
+@media only screen and (min-width: 480px) {
+
+    .menu-icon {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    nav li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 10px;
+        padding: 5px;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+
+    nav li:hover,
+    nav li:focus-visible {
+        transition: border-color 0.2s linear;
+        border: 2px solid white;
+        border-radius: 5px;
+    }
+
+    #myLinks {
+        padding-left: 0;
+        text-align: end;
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+    }
+
+    #myLinks > .button-link {
+        border-style: none;
+    }
+
+    #myLinks > li > a {
+        height: fit-content;
+    }
+
+    #myLinks > li {
+        height: fit-content;
+    }
+}
+
+#map {
+    width: 600px;
+    height: 400px;
+    position: relative;
+}
+
+.main-event {
+    background-color: #c62444;
+    padding: 1rem 0 3rem 0;
+}
+
+.main-event div:not(.main-wrapper):not(#map) {
+    display: flex;
+    gap: 3rem;
+}
+
+.main-event > h1 {
+
+}
+
+.main-event div:not(.main-wrapper) > p {
+    flex-shrink: 5;
+    height: fit-content;
+    align-self: center;
+}
+
+.main-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.link-button {
+    border: 1px white solid;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s linear;
+}
+
+.link-button:hover,
+.link-button:focus-visible {
+    background-color: white;
+    color: #c62444;
+}
+
+.event-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 5rem 0;
+}
+
+.event-list > li {
+    display: flex;
+    flex-direction: column;
+    background-color: #c62444;
+    padding: 2rem;
+    aspect-ratio: auto;
+    border-radius: 5px;
+}
+
+.event-list > li > a {
+    width: fit-content;
+    margin: 1rem auto;
+}
+
+* {
+    box-sizing: border-box
+}
+
+input[type=text],
+input[type=password],
+textarea{
+    display: block;
+    width: 50%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #d3d2d2;
+    border-radius: .3rem;
+}
+
+label{
+    display: block;
+}
+
+textarea{
+    resize: none;
+}
+
+
+input[type=text]:focus,
+input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+
+header button {
+    background-color: #F05C26;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    border-radius: 0.3rem;
+}
+
+main button{
+    padding: .4rem 2rem;
+    margin: 1rem;
+    border-style: solid;
+    border-width: .1rem;
+    border-radius: .5rem;
+}
+
+main nav{
+    display: flex;
+    justify-content: center;
+}
+
+#enter {
+    display: flex;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+#buttonCancel {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+#buttonCancel,
+.signup {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.container {
+    padding: 16px;
+}
+
+.popUp {
+    display: none;
+    position: absolute;
+    z-index: 100000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000bb;
+    padding-top: 50px;
+    overflow: hidden;
+}
+
+.popUp-content {
+    justify-content: center;
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: fit-content;
+    height: fit-content;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.spanClose {
+    font-size: 40px;
+    font-weight: bold;
+    color: #797676;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.top-bar > h1 {
+    margin: 0;
+}
+
+.spanClose:hover,
+.spanClose:focus-visible {
+    color: #f44336;
+    cursor: pointer;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 300px) {
+
+    .signup,
+    #buttonCancel {
+        width: 100%;
+    }
+}
+
+#buttonSignup {
+    visibility: hidden;
+    background-color: #04AA6D;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0 2rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "first-name last-name"
+        "email email"
+        "password repeat-password"
+        "cancel signup";
+}
+
+.first-name {
+    grid-area: first-name;
+}
+
+.last-name {
+    grid-area: last-name;
+}
+
+.email {
+    grid-area: email;
+}
+
+.password {
+    grid-area: password;
+}
+
+.repeat-password {
+    grid-area: repeat-password;
+}
+
+.cancel {
+    grid-area: cancel;
+}
+
+.signup {
+    grid-area: signup;
+}
+
+/*Aanpassingen Emile voor account page*/
+
+.container {
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 1280px;
+}
+
+.vriend{
+    text-align: center;
+    margin: 2rem 2rem 2rem 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    max-width: 10rem;
+}
+
+.vriend:first-child{
+    margin-left: 0;
+}
+
+#vrienden{
+    display: flex;
+}
+
+.evenement{
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.evenement h3, .vriend h3{
+    margin: 0 0 1rem
+}
+
+.evenement a, .vriend a{
+    text-decoration: none;
+    color: black;
+    margin: 10rem .30rem;
+    padding: .5rem;
+    border-radius: 1rem;
+}
+
+.remove{
+    background-color: #e00529;
+}
+
+.information{
+    background-color: #08a7cb;
+}
+
+.evenement a span, .vriend a span{
+    text-align: center;
+}
+
+.vrienden{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#vriendendisplay, #evenementen{
+    display: none;
+}
+
+#btngegevens{
+    background-color: #d3cece;
+}
