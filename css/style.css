@@ -170,8 +170,8 @@ nav li {
     flex-direction: column;
     background-color: #c62444;
     padding: 2rem;
-    aspect-ratio: 1/1;
     border-radius: 5px;
+    width: 20rem;
 }
 
 .event-list > li > a {

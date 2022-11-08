@@ -211,6 +211,7 @@ if ($send) {
                     </div>
                 </div>
             </section>
+            <?php if (isset($_GET["loggedin"])){ ?>
             <section>
                 <div class="main-wrapper">
                     <ul class="event-list">
@@ -237,6 +238,7 @@ if ($send) {
                     </ul>
                 </div>
             </section>
+            <?php } ?>
             <section>
                 <div class="main-wrapper">
                     <h1>About this site.</h1>

@@ -7,6 +7,8 @@ $password = "Sz=GhVEV!AVTr.CSx8J8lwnZ";
 $email = $_REQUEST['email'];
 $psw = $_REQUEST['psw'];
 
+$logged_in = false;
+
 // Create connection
 $conn = new mysqli($hostname, $username, $password, $servername);
 
@@ -17,6 +19,7 @@ $result = $conn->query($sql);
 foreach($result as $key => $value){
     if(password_verify('$psw', '$value'));
     {
-        header("Location: ../");
+        header("Location: ../?loggedin=1");
+        $logged_in = true;
     }
 }
