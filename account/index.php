@@ -31,22 +31,6 @@ if (isset($_SESSION["loggedin"])) {
             <li><a class="nav-link" href="./../">HOME</a></li>
             <li><a class="nav-link" href="./../account">MY ACOUNT</a></li>
             <li><a class="nav-link" href="./../about">ABOUT</a></li>
-            <img class="logo" src="../resources/logo.png" height="64" alt="logo">
-            <a class="menu-icon" href="javascript:void(0);" onclick="myFunction()"><img
-                        src="resources/navigation-menu.svg" width="32" class="rotate" alt="menu"></a>
-        </ul>
-
-        <ul id="myLinks">
-            <li class="button-link">
-                <button id="login">Login</button>
-            </li>
-            <li class="button-link">
-                <button id="register">Register</button>
-            </li>
-            <li><a href="../">HOME</a></li>
-            <li><a href="../events">MY EVENTS</a></li>
-            <li><a href="#">MY ACOUNT</a></li>
-            <li><a href="../about">ABOUT</a></li>
         </ul>
     </nav>
 </header>
@@ -135,7 +119,7 @@ if (isset($_SESSION["loggedin"])) {
     } else {
         ?>
 
-        <h1>Login to use your dashboard!</h1>
+        <h1 class="errorlogin">Login to use your dashboard!</h1>
 
         <?php
     }
