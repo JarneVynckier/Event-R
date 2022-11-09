@@ -367,6 +367,55 @@ body {
     margin: 0 auto;
 }
 
+
+/*Footer*/
+footer {
+    margin-top: 5rem;
+    background-color: #111;
+    color: #f3f3f3;
+    text-decoration: none;
+    border-top: #111 solid 1.5px;
+}
+
+footer a {
+    color: #f3f3f3;
+    text-decoration: none
+}
+
+footer p {
+    margin: 0 2rem 0 2rem;
+    padding: 0.2rem 0 0.2rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.mail li {
+    padding: 0.2rem 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.mail h2 {
+    margin: 1rem 1rem 0.3rem 1rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.aboutf {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #c62444;
+    color: #111;
+}
+
+.mail {
+    margin: 1rem 0 1rem 0;
+}
+
+
 /*--------------------------------------------------------------------------
 ATOMS
 --------------------------------------------------------------------------*/

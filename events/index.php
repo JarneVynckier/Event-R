@@ -1,3 +1,31 @@
+<?php
+$servername = "s5_Testserver";
+$hostname = "5.181.134.167";
+$username = "u5_6lTQBewUTJ";
+$password = "Sz=GhVEV!AVTr.CSx8J8lwnZ";
+
+session_start();
+
+$userid = $_SESSION["iduser"];
+$idevent = $_GET["idevent"];
+// Create connection
+$conn = new mysqli($hostname, $username, $password, $servername);
+
+$sql = "SELECT id, titel, beschrijving, adres, afbeelding, tijdstip FROM eventrevents WHERE id = '$idevent'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    $sendarray = array();
+    foreach ($result as $key => $value) {
+        $id = $value['id'];
+        $titel = $value['titel'];
+        $beschrijving = $value['beschrijving'];
+        $adres = $value['adres'];
+        $afbeelding = $value['afbeelding'];
+        $tijdstip = $value['tijdstip'];
+    }
+}
+?>
 <!doctype html>
 <html lang="nl">
 <head>
@@ -5,9 +33,9 @@
     <meta name="viewport"
           content="width=device-width">
     <title>Events</title>
-<!--    <link rel="stylesheet" href="../css/style.css">-->
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+    <!--    <link rel="stylesheet" href="./../css/atomic-disign.css"> -->
 </head>
 <body>
 <header>
@@ -25,8 +53,8 @@
             <li class="button-link">
                 <button id="register" class="nav-button">REGISTER</button>
             </li>
-            <li><a class="nav-link" href="../">HOME</a></li>
-            <li><a class="nav-link" href="./">MY EVENTS</a></li>
+            <li><a class="nav-link" href="">HOME</a></li>
+            <li><a class="nav-link" href="../events">MY EVENTS</a></li>
             <li><a class="nav-link" href="../account">MY ACOUNT</a></li>
             <li><a class="nav-link" href="../about">ABOUT</a></li>
         </ul>
@@ -35,18 +63,12 @@
 <main>
     <div class="main-wrapper">
         <section>
-            <h1>Title of event</h1>
-            <h2>02/05/2023</h2>
+            <h1><?php echo $titel; ?></h1>
+            <h2><?php echo $tijdstip; ?> (adres: <?php echo $adres; ?>)</h2>
             <div class="img-inline-text">
-                    <img src="https://picsum.photos/800/500" class="event-image">
+                <img src="<?php echo $afbeelding; ?>" alt="Afbeelding van het evenement">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores doloremque ipsam minima
-                    similique? Eos nesciunt quas repellendus voluptate! Adipisci alias dolorum ea, hic, illo in nam
-                    nobis nostrum omnis quidem quis, quos repudiandae temporibus! Deleniti, dolorum, labore. Accusantium
-                    cumque eaque ipsa, numquam odit quia recusandae rem repellat sapiente voluptas, voluptate
-                    voluptatibus! Atque, beatae commodi corporis debitis, deleniti expedita id illum in ipsum itaque
-                    laborum magni mollitia nihil officia officiis quasi quod recusandae veritatis voluptatem voluptatum?
-                    Quasi sit velit voluptatum.
+                    <?php echo $beschrijving; ?>
                 </p>
             </div>
             <div class="btn-group">

@@ -7,11 +7,11 @@ function onLoadDocument() {
             document.getElementById('myevents').innerHTML = document.getElementById('myevents').innerHTML +
                 '<div class="evenement">\n' +
                 '<h3>' + element.titel + '</h3>\n' +
-                '<a class="information" href="">\n' +
+                '<a class="information" href="../events/index.php?idevent=' + element.id +'">\n' +
                 '<span>Information</span>\n' +
                 '</a>\n' +
                 '<a class="remove" href="./removeevent.php?idevent=' + element.id + ' ">\n' +
-                '<span>Verwijder</span>\n' +
+                '<span>Remove</span>\n' +
                 '</a>\n' +
                 '</div>'
         });

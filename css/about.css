@@ -21,10 +21,6 @@ body {
 }
 
 
- {
-    padding: 2rem 0;
-}
-
 .nav-top {
     display: flex;
 }
@@ -63,7 +59,7 @@ nav li {
     border-bottom: 1px solid white;
 }
 
-@media only screen and (min-width : 480px) {
+@media only screen and (min-width: 480px) {
 
     .menu-icon {
         display: none;
@@ -96,58 +92,91 @@ nav li {
         margin-left: auto;
         align-items: center;
     }
-main{background-color: #f1f1f1; }
 
-h1{margin: 1.6rem 8rem 1.6rem 8rem }
+    main {
+        background-color: #f1f1f1;
+    }
 
-.about{margin: 1.6rem 8rem 3rem 8rem;
+    h1 {
+        margin: 1.6rem 8rem 1.6rem 8rem
+    }
+
+    .about {
+        margin: 1.6rem 8rem 3rem 8rem;
+        border: 2px solid #111;
+        background-color: #c62444;
+        color: #111
+    }
+
+    .logogroot {
+        margin: 1.6rem 28rem 1.6rem
+    }
+
+    .onzeinformatie {
+        margin: 1.6rem 8rem 1.6rem 8rem
+    }
+
+    .jarne, .gunnar, .emile, .timon, .timon p, h3, p {
+        padding: 1rem 1rem 1rem 1rem
+    }
+}
+
+.nametags {
+    display: flex;
+    margin: 3rem 8rem 3rem 8rem;
     border: 2px solid #111;
-    background-color: #c62444; color: #111}
+    background-color: #c62444;
+    color: #111
+}
+.nametags img{
+    height: 320px;
+    width: 240px;
+}
 
-.logogroot{margin:1.6rem 28rem 1.6rem}
-.onzeinformatie{ margin:1.6rem 8rem 1.6rem 8rem}
-
-.jarne,.gunnar,.emile,.timon,.timon p,h3,p{ padding: 1rem 1rem 1rem 1rem}}
-
-.jarne,.gunnar,.timon,.emile{display: flex; margin: 3rem 8rem 3rem 8rem;
-    border: 2px solid #111;
-    background-color: #c62444; color: #111}
-
-footer{
+footer {
     background-color: #111;
-    color:#f3f3f3;
+    color: #f3f3f3;
     text-decoration: none;
     border-top: #111 solid 1.5px;
 }
-footer a{color: #f3f3f3; text-decoration: none}
 
-footer p{
+footer a {
+    color: #f3f3f3;
+    text-decoration: none
+}
+
+footer p {
     margin: 0 2rem 0 2rem;
     padding: 0.2rem 0 0.2rem 0;
     display: flex;
     justify-content: center;
 }
-.mail li{
+
+.mail li {
     padding: 0.2rem 0;
     list-style: none;
     display: flex;
     justify-content: center;
 }
-.mail h2{
+
+.mail h2 {
     margin: 1rem 1rem 0.3rem 1rem;
     padding: 0;
     display: flex;
     justify-content: center;
 }
-.aboutf{
+
+.aboutf {
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #c62444;
     color: #111;
 }
-.mail{
-    margin: 1rem 0 1rem 0;}
+
+.mail {
+    margin: 1rem 0 1rem 0;
+}
 
 
 /*--------------------------------------------------------------------------
@@ -204,6 +233,7 @@ h2 {
     padding: 1.1rem;
     margin: 0;
 }
+
 /* MOLECULES */
 
 .img-inline-text {
@@ -215,6 +245,7 @@ h2 {
 .btn-group {
     height: max-content;
 }
+
 .nav-links {
     display: flex;
     gap: 3rem;

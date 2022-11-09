@@ -27,3 +27,10 @@ function displayEvenementen() {
     document.getElementById("btnvrienden").style.backgroundColor = "white";
     document.getElementById("btnevenementen").style.backgroundColor = "#d3cece";
 }
+
+function logout(){
+    const xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "./../php/logout.php", true);
+    xhttp.send();
+    window.location.href = '../'
+}

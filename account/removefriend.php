@@ -4,7 +4,9 @@ $hostname = "5.181.134.167";
 $username = "u5_6lTQBewUTJ";
 $password = "Sz=GhVEV!AVTr.CSx8J8lwnZ";
 
-$userid = '4';
+session_start();
+
+$userid = $_SESSION["iduser"];
 $idfriend = $_GET['idfriend'];
 $idfriendstring = strval($idfriend);
 echo $idfriendstring;
