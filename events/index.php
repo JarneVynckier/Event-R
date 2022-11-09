@@ -42,21 +42,12 @@ if ($result->num_rows > 0) {
     <nav>
         <div class="nav-top">
             <img class="logo" src="../resources/Logo.png" height="64" alt="logo">
-            <!--            <a class="menu-icon" href="javascript:void(0);" onclick="myFunction()">-->
-            <!--                <img src="../resources/navigation-menu.svg" width="32" class="rotate" alt="menu"></a>-->
         </div>
 
         <ul id="myLinks" class="nav-links">
-            <li class="button-link">
-                <button id="login" class="nav-button">LOGIN</button>
-            </li>
-            <li class="button-link">
-                <button id="register" class="nav-button">REGISTER</button>
-            </li>
-            <li><a class="nav-link" href="">HOME</a></li>
-            <li><a class="nav-link" href="../events">MY EVENTS</a></li>
-            <li><a class="nav-link" href="../account">MY ACOUNT</a></li>
-            <li><a class="nav-link" href="../about">ABOUT</a></li>
+            <li><a class="nav-link" href="./../">HOME</a></li>
+            <li><a class="nav-link" href="./../account">MY ACOUNT</a></li>
+            <li><a class="nav-link" href="./../about">ABOUT</a></li>
         </ul>
     </nav>
 </header>

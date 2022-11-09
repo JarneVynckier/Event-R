@@ -1,0 +1,19 @@
+** Teamleden **
+Jarne Vynckier
+Gunnar Deyne
+Timon Claeys
+Emile Loosveld
+
+** LINK **
+https://event-r.emileloosveld.ikdoeict.be/
+
+** EXTRA INFO **
+Als de website niet werkt kan het goed zijn dat het probleem ligt bij de wifi van school,
+wij gebruiken een externe database waarbij dit op een of andere manier op school een probleem vormt.
+
+Wij gebruiken dan zelf even de mobiele data op onze telefoon of een ander netwerk.
+
+- Lukt het niet om te registreren? We hebben een test account ter beschikking
+
+mail: test@test.test
+psw: test
