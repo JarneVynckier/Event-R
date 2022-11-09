@@ -10,7 +10,7 @@ function onLoadDocument() {
                     '<h3>' + el.firstname + '</h3>\n' +
                     '<h3>' + el.lastname + '</h3>\n' +
                     '<a class="remove" href="./removefriend.php?idfriend=' + el.idfriend + ' ">\n' +
-                    '<span>Verwijder</span>\n' +
+                    '<span>Remove</span>\n' +
                     '</a>\n' +
                     '</div>'
             });

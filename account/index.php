@@ -5,9 +5,7 @@
     <meta name="viewport"
           content="width=device-width">
     <title>Account</title>
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
     <link rel="stylesheet" href="./style.css">
-<!--    <link rel="stylesheet" href="../css/style.css">-->
     <script src="getfriends.js"></script>
     <script src="getevent.js"></script>
     <script src="display.js"></script>
@@ -15,38 +13,43 @@
 <body>
 
 <?php
-$loggedin = "true";
+session_start();
+if (isset($_SESSION["loggedin"])) {
+    $loggedin = $_SESSION['loggedin'];
+} else {
+    $loggedin = 'false';
+}
 ?>
 
 <header>
     <nav>
         <div class="nav-top">
-            <img class="logo" src="../resources/Logo.png" height="64" alt="logo">
-            <!--            <a class="menu-icon" href="javascript:void(0);" onclick="myFunction()">-->
-            <!--                <img src="../resources/navigation-menu.svg" width="32" class="rotate" alt="menu"></a>-->
+            <img class="logo" src="../resources/logo.png" height="64" alt="logo">
+            <a class="menu-icon" href="javascript:void(0);" onclick="myFunction()"><img
+                        src="resources/navigation-menu.svg" width="32" class="rotate" alt="menu"></a>
         </div>
 
-        <ul id="myLinks" class="nav-links">
+        <ul id="myLinks">
             <li class="button-link">
-                <button id="login" class="nav-button">LOGIN</button>
+                <button id="login">Login</button>
             </li>
             <li class="button-link">
-                <button id="register" class="nav-button">REGISTER</button>
+                <button id="register">Register</button>
             </li>
-            <li><a class="nav-link" href="../">HOME</a></li>
-            <li><a class="nav-link" href="../events">MY EVENTS</a></li>
-            <li><a class="nav-link" href="./">MY ACOUNT</a></li>
-            <li><a class="nav-link" href="../about">ABOUT</a></li>
+            <li><a href="../">HOME</a></li>
+            <li><a href="../events">MY EVENTS</a></li>
+            <li><a href="#">MY ACOUNT</a></li>
+            <li><a href="../about">ABOUT</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
-    <h1>Mijn account</h1>
-    <nav class="bottom-nav">
-        <button id="btngegevens" onclick="displayGegevens()">Gegevens</button>
-        <button id="btnvrienden" onclick="displayVrienden()">Vrienden</button>
-        <button id="btnevenementen" onclick="displayEvenementen()">Evenementen</button>
+    <h1>My account</h1>
+    <nav>
+        <button id="btngegevens" onclick="displayGegevens()">personal data</button>
+        <button id="btnvrienden" onclick="displayVrienden()">Friends</button>
+        <button id="btnevenementen" onclick="displayEvenementen()">Events</button>
     </nav>
     <?php
     if ($loggedin == "true") {
@@ -55,20 +58,22 @@ $loggedin = "true";
             <div class="container">
                 <form class="kader">
                     <div class="insert">
-                        <label for="fname">Voornaam:</label>
-                        <input type="text" id="fname" name="fname">
+                        <label for="fname">Fist name:</label>
+                        <input type="text" id="fname" name="fname" value="<?php if (isset($_SESSION["firstnameuser"])) {
+                            echo $_SESSION["firstnameuser"];
+                        } ?>" disabled>
                     </div>
                     <div class="insert">
-                        <label for="lname">Achternaam:</label>
-                        <input type="text" id="lname" name="lname">
+                        <label for="lname">Last name:</label>
+                        <input type="text" id="lname" name="lname" value="<?php if (isset($_SESSION["lastnameuser"])) {
+                            echo $_SESSION["lastnameuser"];
+                        } ?>" disabled>
                     </div>
                     <div class="insert">
-                        <label for="username">Gebruikersnaam:</label>
-                        <input type="text" id="username" name="username">
-                    </div>
-                    <div class="insert">
-                        <label for="password">Wachtwoord:</label>
-                        <input type="text" id="password" name="password">
+                        <label for="id">ID:</label>
+                        <input type="text" id="id" name="id" value="<?php if (isset($_SESSION["iduser"])) {
+                            echo $_SESSION["iduser"];
+                        } ?>" disabled>
                     </div>
                 </form>
             </div>
@@ -76,12 +81,12 @@ $loggedin = "true";
         <div class="container">
             <section id="vriendendisplay">
 
-                <h3>Vrienden toevoegen</h3>
+                <h3>Add friends</h3>
                 <form action="addfriend.php" class="formstylingdashboard">
-                    <label for="username">ID van vriend:</label>
+                    <label for="username">ID of friend:</label>
                     <input type="text" id="username" name="friendusername"><br>
                 </form>
-                <h3>Mijn vrienden</h3>
+                <h3>My friends</h3>
                 <div id="vrienden">
 
                 </div>
@@ -90,14 +95,14 @@ $loggedin = "true";
         </div>
         <section id="evenementen">
             <div class="container">
-                <h3>Evenement toevoegen</h3>
+                <h3>Add event</h3>
                 <form action="addevent.php" class="kader">
                     <div class="insert">
-                        <label for="ename">Event naam:</label>
+                        <label for="ename">Event name:</label>
                         <input type="text" id="ename" name="ename" required>
                     </div>
                     <div class="insert">
-                        <label for="ebeschrijving">Event beschrijving:</label>
+                        <label for="ebeschrijving">Event description:</label>
                         <textarea id="ebeschrijving" name="ebeschrijving" rows="4" cols="50"></textarea>
                     </div>
                     <div class="insert">
@@ -105,12 +110,16 @@ $loggedin = "true";
                         <input type="text" id="eadres" name="eadres" required>
                     </div>
                     <div class="insert">
-                        <label for="eafbeelding">Afbeelding:</label>
+                        <label for="eafbeelding">Picture:</label>
                         <input type="text" id="eafbeelding" name="eafbeelding" required>
+                    </div>
+                    <div class="insert">
+                        <label for="etijdstip">Time:</label>
+                        <input type="date" id="etijdstip" name="etijdstip" required>
                     </div>
                     <input type="submit">
                 </form>
-                <h3>Mijn evenementen</h3>
+                <h3>My events</h3>
                 <div id="myevents"></div>
             </div>
         </section>
@@ -118,7 +127,7 @@ $loggedin = "true";
     } else {
         ?>
 
-        <h1>Log in om je dashboard te kunnen beheren</h1>
+        <h1>Login to use your dashboard!</h1>
 
         <?php
     }
