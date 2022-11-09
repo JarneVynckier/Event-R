@@ -215,23 +215,13 @@ if ($send) {
 
     <section class="main-event">
         <div class="main-wrapper">
-            <h1>Event Naam</h1>
+            <h1>Team dinner</h1>
             <a class="link-button" href="">visit</a>
 
             <div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sint, totam. Aliquid
-                    corporis
-                    dignissimos hic iure laudantium magni natus omnis sed, voluptas? Aliquam aut cum distinctio
-                    dolor
-                    dolorum eligendi fugiat iste iure minus mollitia nobis, nulla porro quia quisquam
-                    repellendus,
-                    reprehenderit sunt ut voluptatum? Enim nobis nulla officia omnis quas soluta! Ad aut culpa
-                    cum
-                    delectus
-                    deleniti dolorum facilis, illo impedit ipsam maxime nam necessitatibus odit provident quia
-                    repellat
-                    temporibus voluptatibus? Delectus dolorum qui rerum tempora vel. Ipsa, recusandae, repellat.
+                <p>ello members of the team. I would like to invite you all to have dinner at the lucy chang on wednesday, november 16th at 7PM.
+                    After that we could go out to the omgekeerde wereld to have a drink. please let me know if you can come or not.
                 </p>
                 <img src="https://picsum.photos/300/360" alt="foto van evenement">
                 <div id="map"></div>
